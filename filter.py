@@ -13,7 +13,7 @@ df1 = df
 
 todrop = []
 for j,i in enumerate(df1.start_overpass) : 
-  if datetime.datetime.fromisoformat(i).hour <11 or datetime.datetime.fromisoformat(i).hour > 14:
+  if datetime.datetime.fromisoformat(i).hour <12 or datetime.datetime.fromisoformat(i).hour > 14:
     df1.iloc[j,5] = ''
     todrop.append(j)
 
@@ -21,8 +21,8 @@ df1 = df1.drop(todrop)
 
 df1 = df1[df['latitude'] > -45 ]
 df1 = df1[df1['latitude'] < 55 ]
-#df1 = df1[df1['longitude'] > -123 ]
-#df1 = df1[df1['longitude'] < 15]
+df1 = df1[df1['longitude'] > -123 ]
+df1 = df1[df1['longitude'] < 150]
 print(df1)
 
 

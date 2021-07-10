@@ -1,7 +1,10 @@
+# This code is for learning purpose only
+
 from selenium import webdriver
 import time, datetime
 
-browser = webdriver.Chrome('/home/farouk/Downloads/chromedriver')
+#browser = webdriver.Chrome('/home/farouk/Downloads/chromedriver')
+browser = webdriver.Chrome('chromium.chromedriver')
 browser.get('https://evdc.esa.int/orbit/')
 browser.implicitly_wait(5)
 
